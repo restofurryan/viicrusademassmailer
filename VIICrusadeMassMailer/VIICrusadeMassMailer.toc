@@ -1,0 +1,13 @@
+## Interface: 80000
+## Title: VII Crusade Mass Mailer
+## Version: 8.0.1.1
+## Notes: This addon will load a local list of members of a raid group and send a mail to each member.
+## Author: Restofurryan-Area52
+## DefaultState: enabled
+## SavedVariables: VIICrusadeMassMailer_Debugging
+## SavedVariablesPerCharacter: VIICrusadeMassMailer_RaidGroup
+
+init.lua
+rosterDefault.lua
+register.lua
+VIICrusadeMassMailer.lua
