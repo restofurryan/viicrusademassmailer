@@ -11,9 +11,6 @@ VIICrusadeMassMailer_MainFrame:RegisterEvent("PLAYER_LOGOUT");
 local function VIICrusadeMassMailerEventHandler(self, event, arg1, ...)
     if event == "ADDON_LOADED" and arg1 == "VIICrusadeMassMailer" then
         --Run this the first time the character loads this addon
-        if BoomkingNow_IsDruid == nil then
-            BoomkingNow_CheckIfPlayerIsDruid()
-        end
         if VIICrusadeMassMailer_Debugging then
 			print('VIICrusadeMassMailer DEBUG: Addon has been loaded')
 		end
@@ -23,7 +20,9 @@ local function VIICrusadeMassMailerEventHandler(self, event, arg1, ...)
 			print('VIICrusadeMassMailer DEBUG: Player has entered the world')
 		end
     elseif event == "MAIL_SHOW" then
-        
+        if VIICrusadeMassMailer_Debugging then
+			print('VIICrusadeMassMailer DEBUG: Mail dialog has been opened')
+		end
     end
 end
 
